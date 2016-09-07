@@ -78,7 +78,7 @@ body a{
     text-decoration: none;
 }
 
-.header_arrow a{
+/*.header_arrow a{
   animation-delay: 1s;
   animation-duration: 1s;
   width:36px;
@@ -87,7 +87,7 @@ body a{
   background: url(../images/arrow.png) no-repeat 0px 0px;
   vertical-align: middle;
   margin-top: 1em;
-}
+}*/
 
 
 
