@@ -131,6 +131,7 @@ html, body{
 }
 
 .contactlinks {
+    color: aliceblue;
     animation-delay: 0.3s;
     position: absolute;
     background-color: #444444;
@@ -139,9 +140,14 @@ html, body{
     bottom: 0;
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .contactlinks a  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
     position: relative;
     width: inherit;
     background-color: #222222;
@@ -154,6 +160,14 @@ html, body{
 
 .contactlinks a:hover {
     margin: 0 1em;
+    text-decoration: none;
+}
+
+.contactlinks h1 {
+    font-size: 1.25em;
+    font-weight: 150;
+    letter-spacing: 2px;
+    color: aliceblue;
 }
 
 .linkedin {
