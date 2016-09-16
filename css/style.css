@@ -78,39 +78,77 @@ html, body{
     width: 100%;
     height: 100%;
     display: flex;
+    justify-content:center;
+    flex-direction:column;
+}
+
+.backarrow {
+    
+    margin: 2em;
+    position: absolute;
+    height: inherit;
+}
+
+.backarrow img:hover {
+    transform: rotate(360deg);
+    transition:1.0s all;
+	-webkit-transition:1.0s all;
+	-moz-transition:1.0s all;
+	-o-transition:1.0s all;
+	-ms-transition:1.0s all;
 }
 
 .content {
     margin: auto;
     background-color: #555555;
     width: 100%;
+    height: 40em;
     min-height: 70vh;
     position: relative;
+    
 }
 
 .name {
     animation-delay: 0.1s;
     background-color: #bbbbbb;
     text-align: center;
-    width: 50%;
-    height: 25%;
+    width: 100%;
+    height: 20%;
     top: 0;
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content:center;
     flex-direction:column;
 }
 
+.bigbox {
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.left {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+.right {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
 .aboutme {
-    margin-top: 12.5%;
-    position: absolute;
+    position: relative;
     animation-delay: 0.2s;
     padding-left: 2em;
     padding-right: 2em;
     background-color: #888888;
     text-align: center;
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 70%;
     display: flex;
     justify-content:center;
     flex-direction:column;
@@ -121,22 +159,44 @@ html, body{
     font-size: 2em;
     font-weight: 150;
     letter-spacing: 15px;
+    transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+}
+
+.name h1:hover {
+    letter-spacing: 60px;
 }
 
 
 .content h2 {
-    font-size: 1.5em;
-    font-weight: 100;
-    letter-spacing: 4px;
+    margin-bottom: 2em;
+    color: #444444;
+    font-size: 1.2em;
+    font-weight: 200;
+    letter-spacing: 2px;
+    transition:0.25s all;
+	-webkit-transition:0.25s all;
+	-moz-transition:0.25s all;
+	-o-transition:0.25s all;
+	-ms-transition:0.25s all;
+}
+
+.content h2:hover {
+    font-weight: 200;
+    font-size: 1.4em;
+    color: black;
 }
 
 .contactlinks {
     color: aliceblue;
     animation-delay: 0.3s;
-    position: absolute;
+    position: relative;
     background-color: #444444;
-    width: 50%;
-    height: 25%;
+    width: 100%;
+    height: 30%;
     bottom: 0;
     display: flex;
     flex-direction: row;
@@ -170,16 +230,62 @@ html, body{
     color: aliceblue;
 }
 
-.linkedin {
-    background-color: aliceblue;
+.mylife {
+    position: relative;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    background-color: #222222;
+    color: #cccccc;
+    display: flex;
+    justify-content:center;
+    flex-direction:column;
 }
 
-.mail {
-    animation-delay: 0.5s;
+.gallery {
+    position: relative;
+    width: 100%;
+    height: 90%;
+    margin: 0 auto;
+    padding: 5px;
 }
- 
-.github {
-    animation-delay: 0.6s;
+
+.gallery > div {
+    position: relative;
+    width: 25%;
+    height: 33%;
+    float: left;
+    padding: 5px;
+}
+
+.gallery > div > img {
+    display: flex;
+    justify-content:center;
+    flex-direction:column;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: .1s transform;
+    transform: translateZ(0); 
+}
+
+.gallery > div:hover {
+  z-index: 1;
+}
+
+.gallery > div:hover > img {
+  transform: scale(1.7,1.7);
+  transition: .3s transform;
+}
+
+.cf:before, .cf:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.cf:after {
+  clear: both;
 }
 
 .content_middle{
