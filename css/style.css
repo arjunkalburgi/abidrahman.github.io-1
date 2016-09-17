@@ -9,13 +9,12 @@ p {margin: 0;}
 
 
 html, body{
-    -webkit-font-smoothing: subpixel-antialiased;
     font-family: 'Lato', sans-serif;
     font-size: 100%;
-  	background: #FFf;
+  	background: black;
 }
 
-
+/* ~~~~~~MAIN PAGE~~~~~~ */
 
 .header{
     background-color: black;
@@ -32,7 +31,7 @@ html, body{
     animation-duration: 1.5s;
 	color: #cccccc;
     text-transform: uppercase;
-    font-size: 3.5em;
+    font-size: 4em;
     font-weight: 200;
     letter-spacing: 10px;
 }
@@ -66,24 +65,36 @@ html, body{
     animation-duration: 2.0s;
 	color: #cccccc;
     text-transform: lowercase;
-    font-size: 20px;
+    font-size: 1.5em;
     font-weight: 100;
     letter-spacing: 5px;
     text-decoration: none;
 }
 
+.links a:hover {
+    font-size: 1.7em;
+    transition:0.2s all;
+	-webkit-transition:0.2s all;
+	-moz-transition:0.2s all;
+	-o-transition:0.2s all;
+	-ms-transition:0.2s all;
+}
+
+
+/* ~~~~~~ABOUT PAGE~~~~~~ */
+
 .about {
+    position: absolute;
     background-color: black;
-    min-height: 100vh;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content:center;
     flex-direction:column;
+    overflow: hidden;
 }
 
 .backarrow {
-    
     margin: 2em;
     position: absolute;
     height: inherit;
@@ -98,19 +109,17 @@ html, body{
 	-ms-transition:1.0s all;
 }
 
-.content {
+.contentabout {
     margin: auto;
     background-color: #555555;
-    width: 100%;
-    height: 40em;
-    min-height: 70vh;
+    height: 70%;
     position: relative;
     
 }
 
 .name {
     animation-delay: 0.1s;
-    background-color: #bbbbbb;
+    background-color: #cccccc;
     text-align: center;
     width: 100%;
     height: 20%;
@@ -141,6 +150,7 @@ html, body{
 }
 
 .aboutme {
+    overflow: auto;
     position: relative;
     animation-delay: 0.2s;
     padding-left: 2em;
@@ -154,7 +164,7 @@ html, body{
     flex-direction:column;
 }
 
-.content h1 {
+.name h1 {
     text-transform: uppercase;
     font-size: 2em;
     font-weight: 150;
@@ -171,9 +181,9 @@ html, body{
 }
 
 
-.content h2 {
-    margin-bottom: 2em;
-    color: #444444;
+.contentabout h2 {
+    margin-bottom: 1em;
+    color: black;
     font-size: 1.2em;
     font-weight: 200;
     letter-spacing: 2px;
@@ -184,7 +194,7 @@ html, body{
 	-ms-transition:0.25s all;
 }
 
-.content h2:hover {
+.contentabout h2:hover {
     font-weight: 200;
     font-size: 1.4em;
     color: black;
@@ -256,6 +266,7 @@ html, body{
     height: 33%;
     float: left;
     padding: 5px;
+    overflow: hidden;
 }
 
 .gallery > div > img {
@@ -264,13 +275,15 @@ html, body{
     flex-direction:column;
     display: block;
     width: 100%;
-    height: 100%;
+    height: auto;
+    min-height: 100%;
     transition: .1s transform;
     transform: translateZ(0); 
 }
 
 .gallery > div:hover {
   z-index: 1;
+    overflow: visible;
 }
 
 .gallery > div:hover > img {
@@ -288,13 +301,76 @@ html, body{
   clear: both;
 }
 
-.content_middle{
-	background: black;
-	padding:8em 0;
-    text-align: center;
-    color: azure;
+/* ~~~~~~WORK PAGE~~~~~~ */
+
+.work {
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content:center;
+    flex-direction:column;
+    overflow: hidden;
 }
 
+.contentwork {
+    margin: auto;
+    background-color: #555555;
+    height: 70%;
+    position: relative;
+}
+
+.bigboxwork {
+    width: auto;
+    position: relative;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.aboutmework {
+    overflow: auto;
+    position: relative;
+    animation-delay: 0.2s;
+    padding-left: 2em;
+    padding-right: 2em;
+    background-color: #999999;
+    text-align: center;
+    width: 60%;
+    height: auto;
+    display: flex;
+    justify-content:center;
+    flex-direction:column;
+}
+
+.workterm {
+    height: auto;
+    width: 20%;
+    display: relative;
+    margin: 0 0.5em;
+    background-color: #222222;
+    display: flex;
+    justify-content:center;
+    flex-direction:column;
+    text-align: center;
+    color: #dddddd;
+}
+
+.first:hover {
+    transform: translateX(-20em);
+    transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+}
+
+.workterm h1 {
+    font-size: 1.2em;
+    font-weight: 200;
+}
 
 /*--responsive design--*/
 
