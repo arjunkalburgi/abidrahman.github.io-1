@@ -76,6 +76,7 @@ html {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
+  overflow-y: scroll;
   position: relative;
 }
 
@@ -546,7 +547,6 @@ header ul li a:hover {
 
 .teaser_item {
   background-color: rgb(235,235,235);
-  overflow: hidden;
 	width: calc(50vw - 88px);
 	margin: 0 44 44 0;
   height: 20vw;
