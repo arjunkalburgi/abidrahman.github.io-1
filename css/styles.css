@@ -49,9 +49,9 @@ h1 {
 
 h3 {
   animation-delay: 1.5s;
-  animation-duration: 2.0s;
+  animation-duration: 3.0s;
 	font-size: 20px;
-	line-height: 0.93em;
+	line-height: 5em;
 	font-family: 'Lato';
 	display: block;
 	text-align: center;
@@ -90,8 +90,6 @@ h2 {
 	letter-spacing: 0px;
 	font-weight: lighter;
 	
-	-webkit-animation: fadeInUp 0.7s ease;
-	animation: fadeInUp 0.7s ease;
 }
 
 h2 a {color: #fff !important;}
@@ -149,6 +147,15 @@ header {
 	top: 0;
 	position: fixed;
 	z-index: 999999;
+}
+
+#top {
+  height: 100%;
+  width: 100%;
+  min-height: 100%;
+  min-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 header span a {
