@@ -94,8 +94,8 @@ h2 a {color: #fff !important;}
 h2 a:hover {text-decoration: line-through;}
 
 html {
-  height: 100%;
-  width: 100%;
+  height: auto;
+  width: auto;
   overflow-x: hidden;
   position: relative;
 }
@@ -126,6 +126,7 @@ body {
 	width: 100%;
 	min-height: 100%;
 	height: auto;
+  min-height: 100%;
 	position: relative;
 	z-index: 999999;
 	margin-bottom: 325px;
