@@ -1,35 +1,48 @@
 
-<html ng-app class="no-js">
-  <head lang="en">
+<html lang="en">
+  <head>
     <meta charset="utf-8">
     <title>Abid Rahman</title>  
     
     <meta name="keywords" content="edmonton, canada, software, coding, programmer, webdesign, engineer, universityofalberta, student, androiddev">
     <meta name="description" content="Software Engineer in the Making.">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=0.50, maximum-scale=0.50, minimum-scale=0.50, user-scalable=0">
-    <meta name="MobileOptimized" content="320">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="mobile-web-app-capable" content="yes">
-            
+                
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <link href="css/animate.css" rel="stylesheet" type="text/css">
     <link href='//fonts.googleapis.com/css?family=Lato:100,200,300,400,700,900' rel='stylesheet' type='text/css'>
    
-   
     <script type="text/javascript" src="js/jquery-latest.js"></script>
     <script type="text/javascript" src="js/functions.js"></script>
+	<script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
     
+	<script>
+		$(document).ready(function(){
+
+			var quotes = $(".quotes");
+			var quoteIndex = -1;
+			
+			function showNextQuote() {
+				++quoteIndex;
+				quotes.eq(quoteIndex % quotes.length)
+					.fadeIn(500)
+					.delay(4000)
+					.fadeOut(500, showNextQuote);
+			}
+			showNextQuote();
+		})();
+	</script> 
 </head>
 
 <body id="top">
 <div id="body">
-  
+<a id="contact" style="position: absolute; bottom: 0px; left:0;"></a>
+
   <header>
-        <span class="font_color"><a class="scroll font_color wow fadeInLeft" href="index.html#top">Abid Rahman</a></span>
+        <span class="font_color"><a class="scroll font_color" href="index.html#top">Abid Rahman</a></span>
         <ul class="navi_fade">
-            <li><a class="scroll wow fadeInRight" href="index.html#work">Projects</a></li>
-            <li><a class="scroll wow fadeInLeft" href="index.html#about">About</a></li>
-            <li><a class="scroll wow fadeInRight" href="index.html#contact">Contact</a></li>
+            <li><a class="scroll" href="index.html#work">Projects</a></li>
+            <li><a class="scroll" href="index.html#about">About</a></li>
+            <li><a class="scroll" href="index.html#contact">Contact</a></li>
         </ul>
     </header>
     
@@ -66,7 +79,7 @@
 	</div>
     <br clear="all"><br><br>
     </div>
-    <br clear="all" id="contact">
+    <br clear="all">
     <div class="contact_container">
         <h2>      
           <a href="https://github.com/abidrahman" class="github">Github</a>
@@ -91,7 +104,7 @@
     wow.init();	
     </script>
     
-    <script type="text/javascript">
+    <script>
 	    	var tStart = 30 // Start transition 100px from top
 	  		, tEnd = 500   // End at 500px
 	  		, cStart = [0, 0, 0]
