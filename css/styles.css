@@ -48,8 +48,6 @@ h1 {
 }
 
 h3 {
-  animation-delay: 1.5s;
-  animation-duration: 3.0s;
 	font-size: 20px;
 	line-height: 5em;
 	font-family: 'Lato';
@@ -281,7 +279,7 @@ header ul li a:hover {
 	position: relative;
 }
 
-/*
+
 .about h1 {
   width: 100%;
   color: black;
@@ -290,7 +288,7 @@ header ul li a:hover {
   margin: 0;
   padding: 100 0 0 0;
 }
-*/
+
 
 .contact {
 	width: 80%;
@@ -570,7 +568,7 @@ header ul li a:hover {
   z-index: 3;
 }
 
-/*
+
 .teaser_container h1 {
   width: 100%;
   color: black;
@@ -579,7 +577,7 @@ header ul li a:hover {
   margin: 0;
   padding: 50 0 0 0;
 }
-*/
+
 
 .teaser_item {
   background-color: rgb(235,235,235);
