@@ -48,6 +48,8 @@ h1 {
 }
 
 h3 {
+  animation-delay: 1.5s;
+  animation-duration: 3.0s;
 	font-size: 20px;
 	line-height: 5em;
 	font-family: 'Lato';
@@ -94,8 +96,8 @@ h2 a {color: #fff !important;}
 h2 a:hover {text-decoration: line-through;}
 
 html {
-  height: auto;
-  width: auto;
+  height: 100%;
+  width: 100%;
   overflow-x: hidden;
   position: relative;
 }
@@ -126,10 +128,10 @@ body {
 	width: 100%;
 	min-height: 100%;
 	height: auto;
-  min-height: 100%;
 	position: relative;
+	background: black;
 	z-index: 999999;
-	margin-bottom: 325px;
+	margin-bottom: 480px;
 }
 
 .wrapper {
