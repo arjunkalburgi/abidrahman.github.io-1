@@ -20,24 +20,6 @@
     <script type="text/javascript" src="js/functions.js"></script>
     <script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
     
-    <script>
-		$(document).ready(function(){
-
-			var quotes = $(".quotes");
-			var quoteIndex = -1;
-			
-			function showNextQuote() {
-				++quoteIndex;
-				quotes.eq(quoteIndex % quotes.length)
-					.fadeIn(500)
-					.delay(4000)
-					.fadeOut(500, showNextQuote);
-			}
-			showNextQuote();
-		})();
-    </script>
-    
-    
 </head>
 
 <body id="top">
