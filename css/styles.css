@@ -48,8 +48,6 @@ h1 {
 }
 
 h3 {
-  animation-delay: 1.5s;
-  animation-duration: 3.0s;
 	font-size: 20px;
 	line-height: 5em;
 	font-family: 'Lato';
@@ -156,7 +154,6 @@ header {
   min-width: 100%;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  overflow-y: hidden;
 }
 
 header span a {
