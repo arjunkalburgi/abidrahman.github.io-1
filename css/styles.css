@@ -24,6 +24,11 @@
 	unicode-range: U+0020-25CA;
 }
 
+@-ms-viewport{
+  width: device-width;
+  height: device-height;
+}
+
 h1 {
   animation-delay: 0.5s;
   animation-duration: 1.0s;
