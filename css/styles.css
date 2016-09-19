@@ -156,6 +156,7 @@ header {
   min-width: 100%;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  overflow-y: hidden;
 }
 
 header span a {
