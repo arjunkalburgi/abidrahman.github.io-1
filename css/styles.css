@@ -199,7 +199,6 @@ header span a:hover {
 	font-family: 'Grotesk-Regular';
 	font-size: 15px;
 	z-index: 999999;
-	heigh: 20px;
 	letter-spacing: 1.2px;
 	text-align: right;
 }
@@ -665,6 +664,7 @@ header ul li a:hover {
   min-width: 25%;
   min-height: 100%;
   background-color: rbg(17,17,17);
+  margin: 0 1%;
   transition:0.5s all;
 	-webkit-transition:0.5s all;
 	-moz-transition:0.5s all;
