@@ -392,7 +392,7 @@ header ul li a:hover {
 }
 
 .teaser_container {
-	padding: 190px 10px 10px 10px;
+	padding: 114px 10px 10px 10px;
   box-sizing: border-box;
   padding-left: 47px;
 	height: auto;
@@ -409,7 +409,12 @@ header ul li a:hover {
   top:0;
   bottom: 0;
   margin: 0;
-  padding: 50 0 0 0;
+  /*padding: 50 0 0 0;*/
+  position: static;
+}
+
+.teaser_wrapper {
+
 }
 
 
