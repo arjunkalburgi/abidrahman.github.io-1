@@ -342,9 +342,9 @@ header ul li a:hover {
 	margin: 0px auto 55px auto;
 	padding-top: 235px;
 	box-sizing: border-box;
-	font-size: 7vw;
+/*	font-size: 7vw;
 	line-height: 1.10em;
-	letter-spacing: -1px;
+	letter-spacing: -1px;*/
 	font-family: 'Lato';
   font-weight: 300;
 	text-align: left;
@@ -360,6 +360,13 @@ header ul li a:hover {
   bottom: 0;
   margin: 0;
   padding: 100 0 0 0;
+}
+
+.aboutme {
+	text-align: center;
+	font-size: 4vw;
+	/*line-height: 1.10em;*/
+	letter-spacing: -1px;
 }
 
 
