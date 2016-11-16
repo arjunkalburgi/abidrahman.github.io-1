@@ -23,20 +23,14 @@
   	<div style="text-align:center;"></div>
     <script type="text/javascript">
       
-    var width = 1000;
-    var height = 950;
-    var textHeight = 78;
+    var width = 1000,
+        height = 950,
+        textHeight = 78,
+        centered,
+        min,
+        max;
 
     var totalCrimeData = {};
-    var typeCrimeData = {"Assault": 0, 
-                         "Break and Enter": 0,
-                         "Homicide": 0,
-                         "Robbery": 0,
-                         "Sexual Assaults": 0,
-                         "Theft From Vehicle": 0,
-                         "Theft Of Vehicle": 0,
-                         "Theft Over $5000": 0
-                        };
 
     var projection = d3.geoMercator()
               .scale(100000)
@@ -46,11 +40,16 @@
     var path = d3.geoPath()
           .projection(projection);
 
-    var svg = d3.select("div")
-          .append("svg")
+    var svg = d3.select("div").append("svg")
           .attr("width", width)
           .attr("height", height)
 
+    svg.append("rect")
+      .attr("class", "background")
+      .attr("width", width)
+      .attr("height", height)
+      .on("click", clicked)
+  
     d3.select("svg").append("text")
       .attr("id", "title")
       .attr("x", 5)
@@ -127,7 +126,6 @@
 
     var g = svg.append("g");
 
-
     d3.csv("/docs/data.csv", function(crimeData) {
       for (i = 0; i < crimeData.length; i++) {
           if (!(crimeData[i].neighbourhood in totalCrimeData)) {
@@ -142,20 +140,23 @@
                                                           "Theft Over $5000": 0
                                                           };
             totalCrimeData[crimeData[i].neighbourhood]["Total"] = parseInt(crimeData[i].no_of_crime);
-            totalCrimeData[crimeData[i].neighbourhood][crimeData[i].type_crime] += parseInt(crimeData[i].no_of_crime);
           }
           else {
             totalCrimeData[crimeData[i].neighbourhood]["Total"] += parseInt(crimeData[i].no_of_crime);
-            totalCrimeData[crimeData[i].neighbourhood][crimeData[i].type_crime] += parseInt(crimeData[i].no_of_crime);
           }
-
+        totalCrimeData[crimeData[i].neighbourhood][crimeData[i].type_crime] += parseInt(crimeData[i].no_of_crime);
       }
+      
       var arr = Object.keys(totalCrimeData).map(function(key) {return totalCrimeData[key]["Total"];});
-      var min = Math.min.apply(null, arr);
-      var max = Math.max.apply(null, arr);
-
+      min = Math.min.apply(null, arr),
+      max = Math.max.apply(null, arr); 
+    
+      
       d3.json("/docs/yeg.geojson", function(mapData) {
+
         var features = mapData.features;
+        console.log(min);
+        console.log(max);
         var scale = d3.scalePow()
               .exponent(0.5)
               .domain([min, max])
@@ -167,6 +168,7 @@
                     return 0;
                   }
                   else {
+                    console.log( scale(totalCrimeData[d.properties.name.toUpperCase()]["Total"]));
                     return scale(totalCrimeData[d.properties.name.toUpperCase()]["Total"]);
                   }
                 } else {
@@ -191,16 +193,7 @@
               .text("Number of Crimes: " + 
                 totalCrimeData[d3.select(this).data()[0].properties.name.toUpperCase()]["Total"]);
           })
-          .on("mousedown", function() {
-            d3.select("#text3").text("Assault: " + totalCrimeData[d3.select(this).data()[0].properties.name.toUpperCase()]["Assault"])
-            d3.select("#text4").text("Break and Enter: " + totalCrimeData[d3.select(this).data()[0].properties.name.toUpperCase()]["Break and Enter"])
-            d3.select("#text5").text("Homicide: " + totalCrimeData[d3.select(this).data()[0].properties.name.toUpperCase()]["Homicide"])
-            d3.select("#text6").text("Robbery: " + totalCrimeData[d3.select(this).data()[0].properties.name.toUpperCase()]["Robbery"])
-            d3.select("#text7").text("Sexual Assaults: " + totalCrimeData[d3.select(this).data()[0].properties.name.toUpperCase()]["Sexual Assaults"])
-            d3.select("#text8").text("Theft From Vehicle: " + totalCrimeData[d3.select(this).data()[0].properties.name.toUpperCase()]["Theft From Vehicle"])
-            d3.select("#text9").text("Theft Of Vehicle: " + totalCrimeData[d3.select(this).data()[0].properties.name.toUpperCase()]["Theft Of Vehicle"])
-            d3.select("#text10").text("Theft Over $5000: " + totalCrimeData[d3.select(this).data()[0].properties.name.toUpperCase()]["Theft Over $5000"])
-          })
+          .on("click", clicked)
           .on("mouseout", function() {
             d3.select(this)
             .style("fill", "rgb(204, 0, 0)")
@@ -215,10 +208,38 @@
             d3.select("#text8").text("");
             d3.select("#text9").text("");
             d3.select("#text10").text("");
-
           });
       });
     });
+      
+    function clicked(d) {
+      if (!d || centered == d) {
+        projection.translate([width / 2, height / 2]);
+        centered = null;
+      } else {
+        var centroid = path.centroid(d),
+            translate = projection.translate();
+        projection.translate([
+          translate[0] - centroid[0] + width / 2,
+          translate[1] - centroid[1] + height / 2
+        ]);
+        centered = d;
+      }
+      
+      d3.select("#text3").text("Assault: " + totalCrimeData[d3.select(this).data()[0].properties.name.toUpperCase()]["Assault"])
+      d3.select("#text4").text("Break and Enter: " + totalCrimeData[d3.select(this).data()[0].properties.name.toUpperCase()]["Break and Enter"])
+      d3.select("#text5").text("Homicide: " + totalCrimeData[d3.select(this).data()[0].properties.name.toUpperCase()]["Homicide"])
+      d3.select("#text6").text("Robbery: " + totalCrimeData[d3.select(this).data()[0].properties.name.toUpperCase()]["Robbery"])
+      d3.select("#text7").text("Sexual Assaults: " + totalCrimeData[d3.select(this).data()[0].properties.name.toUpperCase()]["Sexual Assaults"])
+      d3.select("#text8").text("Theft From Vehicle: " + totalCrimeData[d3.select(this).data()[0].properties.name.toUpperCase()]["Theft From Vehicle"])
+      d3.select("#text9").text("Theft Of Vehicle: " + totalCrimeData[d3.select(this).data()[0].properties.name.toUpperCase()]["Theft Of Vehicle"])
+      d3.select("#text10").text("Theft Over $5000: " + totalCrimeData[d3.select(this).data()[0].properties.name.toUpperCase()]["Theft Over $5000"])
+      
+      g.selectAll("path").transition()
+        .duration(750)
+        .attr("d", path);
+    }
+
 	</script>
   </body>
 </html>
