@@ -105,7 +105,7 @@
 h1 {
   animation-delay: 0.5s;
   animation-duration: 1.0s;
-	font-size: 60px;
+	font-size: 4vw;
 	line-height: 0.93em;
 	font-family: 'Lato';
 	display: block;
@@ -151,7 +151,7 @@ h2 a:hover {text-decoration: line-through;}
 
 h3 {
   animation-delay: 1.0s;
-	font-size: 20px;
+	font-size: 1.33vw;
 	line-height: 0.93em;
 	font-family: 'Lato';
 	display: block;
@@ -239,8 +239,8 @@ body {
 	margin: 0;
 	width: 100%;
 	height: 100%;
-  min-height: 100%;
-  min-width: 100%;
+	min-height: 100%;
+	min-width: 100%;
 	-webkit-font-smoothing: antialiased;
 	position:relative;
   -moz-box-sizing: border-box;
@@ -250,10 +250,13 @@ body {
 #body {
 	width: 100%;
 	min-height: 100%;
+	min-width: 100%;
 	margin-bottom: 400px;
+	right: 0;
+	left: 0;
 	height: auto;
-	position: relative;
-	background: black;
+	position: absolute;
+	background: #000;
 	z-index: 999999;
 }
 
@@ -340,13 +343,12 @@ body {
 }
 
 .teaser_container {
-	padding: 114px 10px 10px 10px;
-  box-sizing: border-box;
-  padding-left: 65px;
+	padding: 10px 10px 10px 10px;
+	box-sizing: border-box;
 	height: auto;
 	position: relative;
-  width: 100%;
-  z-index: 3;
+	width: 100%;
+	z-index: 3;
 }
 
 .teaser_container h1 {
@@ -357,29 +359,34 @@ body {
   bottom: 0;
   margin: 0;
   padding: 0 0 0 0;
-  position: static;
+  position: absolute;
+}
+
+.teaser_wrapper {
+	padding-top: 6vw;
+	left: 0;
+	width: 100%;
+	margin: 0;
 }
 
 .teaser_item {
   background-color: #fff;
-  width: 18vw;
+  width: 13.5vw;
   margin: 0;
-  height: 18vw;
-  padding-top: 2vw;
+  height: 13.5vw;
+  padding: 3vw;
   overflow: hidden;
   float: left;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
 }
 
 .teaser_item img {
 	max-width: 100%;
-  max-height: 100%;
-  height: auto;
-	width: 75%;
+	max-height: 100%;
+	height: auto;
 }
 
 .teaser_item img:hover {
