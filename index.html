@@ -1,62 +1,45 @@
 
 <html lang="en">
+
   <head>
     <meta charset="utf-8">
     <title>Abid Rahman</title>  
     
-    <meta name="keywords" content="abid, rahman, edmonton, canada, software, coding, programmer, webdesign, engineer, universityofalberta, student, androiddev">
+    <meta name="keywords" content="abid rahman, abid, rahman, edmonton, canada, software, coding, programmer, webdesign, engineer, universityofalberta, student, androiddev">
     <meta name="description" content="Software Engineer in the Making.">
-    <meta name="viewport" content="width=device-width, initial-scale=0">
-                
+    <meta name="viewport" content="width=device-width, initial-scale=0">   
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <link href="css/animate.css" rel="stylesheet" type="text/css">
-   
     <script type="text/javascript" src="js/jquery-latest.js"></script>
-    <script type="text/javascript" src="js/functions.js"></script>
-	<script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
-    
-	<script>
-		$(document).ready(function(){
+    <script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/functions.js"></script>
 
-			var quotes = $(".quotes");
-			var quoteIndex = -1;
-			
-			function showNextQuote() {
-				++quoteIndex;
-				quotes.eq(quoteIndex % quotes.length)
-					.fadeIn(500)
-					.delay(4000)
-					.fadeOut(500, showNextQuote);
-			}
-			showNextQuote();
-		});
-	</script> 
-</head>
+  </head>
 
-<body id="top">
-<div id="body">
-<a id="contact" style="position: absolute; bottom: 0px; left:0;"></a>
+  <body>
+    <div id="body">
 
-  <header>
-        <span class="font_color"><a class="scroll font_color" href="#top">Abid Rahman</a></span>
+      <header>
+        <span class="font_color scroll"><a class="font_color" href="#top">Abid Rahman</a></span>
         <ul class="navi_fade">
-            <li><a class="scroll" href="#work">Projects</a></li>
+            <li><a class="scroll" href="#projects">Projects</a></li>
             <li><a class="scroll" href="#about">About</a></li>
             <li><a class="scroll" href="#contact">Contact</a></li>
         </ul>
-    </header>
-    
-	<div class="main">
+      </header>
+        
+    	<div class="main">
     	   <h1 class="font_color wow fadeInUp">ABID RAHMAN</h1>
          <h3 class="font_color wow fadeInDown">-software engineer in the making-</h3>
-         <div class="work_link font_color"><a class="font_color scroll" href="#work">Projects</a></div>
-         <div class="customer"><a class="scroll" href="#about">About</a></div>
-         <div class="home_description"><a class="scroll" href="#contact">Contact</a></div>
-    </div>
-    
-    <div class="teaser_container" id="work">
-      <h1> PROJECTS </h1>
-      <div class="teaser_wrapper">
+         <div class="project_link"><a href="#projects">Projects</a></div>
+         <div class="about_link"><a href="#about">About</a></div>
+         <div class="contact_link"><a href="#contact">Contact</a></div>
+      </div>
+        
+      <div class="teaser_container" id="projects">
+        <h1> PROJECTS </h1>
+        <div class="teaser_wrapper">
           <div class="teaser_item wow fadeInUp"><a href="http://play.google.com/store/apps/details?id=com.abidrahman.tapmaster.android&hl=en" target="_blank"><img src="images/tapmasterlogo.png"></a></div>
           <div class="teaser_item wow fadeInUp"><a href="http://github.com/abidrahman/ArDDRuino" target="_blank"><img src="images/ArDDRuino.png"></a></div>
           <div class="teaser_item wow fadeInUp"><a href="http://github.com/abidrahman/eupa-score-counter" target="_blank"><img src="images/scorecounterlogo.png"></a></div>
@@ -64,96 +47,24 @@
           <div class="teaser_item wow fadeInUp"><a href="/yegcrimeheatmap.html" target="_blank"><img src="images/heatmap.png"></a></div>
           <br clear="all">
         </div>
-    </div>
-
-    <div class="about wow fadeInUp" id="about">
-      <h1> ABOUT ME </h1>
-      <div class="aboutme">
-        I am a 20 year old Canadian student in the middle of my software engineering studies at the University of Alberta.  Passionate about creating simple solutions to complex problems, avid sports fan, and occasional photographer.
       </div>
-      
 
-	</div>
-    <br clear="all"><br><br>
+      <div class="about wow fadeInUp" id="about">
+        <h1> ABOUT ME </h1>
+        <div class="aboutme">
+          I am a 20 year old Canadian student in the middle of my software engineering studies at the University of Alberta.  Passionate about creating simple solutions to complex problems, avid sports fan, and occasional photographer.
+        </div>
+      </div>
     </div>
-    <br clear="all">
+
     <div class="contact_container">
-        <h2>      
-          <a href="https://github.com/abidrahman" class="github">Github</a>
-          <a href="mailto::arahman1@ualberta.ca" class="mail">Mail</a>
-          <a href="https://www.linkedin.com/in/abidrahman1" class="linkedin">LinkedIn</a>
-          <a href="docs/Resume.pdf" class="resume">Resume</a>
-        </h2>
+      <h2>      
+        <a href="https://github.com/abidrahman" class="github">Github</a>
+        <a href="mailto::arahman1@ualberta.ca" class="mail">Mail</a>
+        <a href="https://www.linkedin.com/in/abidrahman1" class="linkedin">LinkedIn</a>
+        <a href="docs/Resume.pdf" class="resume">Resume</a>
+      </h2>
     </div>
 
-    <script type="text/javascript">
-      $("a.scroll").click(function() {
-        href = $(this).attr('href');
-        console.log('click' + href);
-        $(document.body).animate({
-            'scrollTop': $(href).offset().top
-        }, 1000);
-      });
-    </script>
-
-    <script src="js/wow.min.js"></script>
-    
-    <script>
-    wow = new WOW(
-      {
-        animateClass: 'animated',
-        offset:       70,
-        callback:     function(box) {
-          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
-        }
-      }
-    );
-    wow.init();	
-    </script>
-    
-    <script>
-	    	var tStart = 30 // Start transition 100px from top
-	  		, tEnd = 500   // End at 500px
-	  		, cStart = [0, 0, 0]
-	  		, cEnd = [255, 255, 255]
-	  		, cDiff = [cEnd[0] - cStart[0], cEnd[1] - cStart[1], cEnd[1] - cStart[0]];
-	
-			$(document).ready(function(){
-	    	$(document).scroll(function() {
-	        var p = ($(this).scrollTop() - tStart) / (tEnd - tStart); // % of transition
-	        p = Math.min(1, Math.max(0, p)); // Clamp to [0, 1]
-	        var cBg = [Math.round(cStart[0] + cDiff[0] * p), Math.round(cStart[1] + cDiff[1] * p), Math.round(cStart[2] + cDiff[2] * p)];
-	        $("#body").css('background-color', 'rgb(' + cBg.join(',') +')');
-	   		});
-			});
-			
-			
-			var tStart2 = 30 // Start transition 100px from top
-	  		, tEnd2 = 500   // End at 500px
-	  		, cStart2 = [255, 255, 255]
-	  		, cEnd2 = [0, 0, 0]
-	  		, cDiff2 = [cEnd2[0] - cStart2[0], cEnd2[1] - cStart2[1], cEnd2[1] - cStart2[0]];
-	
-	    	$(document).scroll(function() {
-	        var p = ($(this).scrollTop() - tStart2) / (tEnd2 - tStart2); // % of transition
-	        p2 = Math.min(1, Math.max(0, p)); // Clamp to [0, 1]
-	        var cBg2 = [Math.round(cStart2[0] + cDiff2[0] * p2), Math.round(cStart2[1] + cDiff2[1] * p2), Math.round(cStart2[2] + cDiff2[2] * p2)];
-	        $(".font_color").css('color', 'rgb(' + cBg2.join(',') +')');
-	   		});
-			
-	</script>	
-
-    <!--Analytics -->
-<!--
-	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		
-		ga('create', 'placeholder', 'abidrahman.com');
-		ga('send', 'pageview');
-    </script>
--->
-</body>
+  </body>
 </html>

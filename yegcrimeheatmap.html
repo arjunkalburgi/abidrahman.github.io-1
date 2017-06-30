@@ -244,19 +244,6 @@
             centered = null;
           }
 
-    //      if (!d || centered == d) {
-    //        projection.translate([width / 2, height / 2]);
-    //        centered = null;
-    //      } else {
-    //        var centroid = path.centroid(d),
-    //            translate = projection.translate();
-    //        projection.translate([
-    //          translate[0] - centroid[0] + width / 2,
-    //          translate[1] - centroid[1] + height / 2
-    //        ]);
-    //        centered = d;
-    //      }
-
           d3.select("#text1").attr("y", textHeight + 230)
           d3.select("#text2").attr("y", textHeight + 260)
           d3.select("#text3").text("Assault: " + totalCrimeData[d3.select(this).data()[0].properties.name.toUpperCase()]["Assault"])
@@ -277,17 +264,6 @@
             .attr("transform", "translate(" + width / 1.8 + "," + height / 2.2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
             .style("fill", "rgb(204,0,0)")
             .style("opacity", .90)
-
-
-    //      g.transition()
-    //        .duration(750)
-    //        .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
-    //        .style("stroke-width", 1.5 / k + "px");
-
-
-    //      g.selectAll("path").transition()
-    //        .duration(750)
-    //        .attr("d", path);
         }
       });
     });
