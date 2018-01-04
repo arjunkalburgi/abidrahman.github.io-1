@@ -1,0 +1,124 @@
+/*  
+    Copyright Abid Rahman 2018
+    Filename: resume.css
+    The main stylesheet for my resume
+*/
+
+body {
+    margin: 50px auto;
+    width: 850px;
+    height: 1200px;
+    font-family: 'Rajdhani', sans-serif;
+    background: rgba(221, 221, 221, 0.6);
+}
+
+h1 {
+    margin-left: 25px;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 15px 0 10px 10px;
+}
+
+h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+h4 {
+    margin: 0;
+    font-size: 14px;
+}
+
+hr {
+    width: 850px;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #111;
+    margin: 1em 0 0.5em 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 10px;
+}
+
+li {
+    margin: 10px;
+}
+
+ul #description {
+    list-style-type: circle;
+    padding-left: 10px; 
+}
+
+ul #description li {
+    margin: 7px 10px 7px 10px;
+    font-size: 13px;
+}
+
+.date {
+    float:right;
+    font-style: italic;
+}
+
+#content {
+    height: 1075px;
+    width: 850px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#logo {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#main {
+    width: 625px;
+    height: 1050px;
+}
+
+#projects img {
+    float: right;
+}
+
+#sidebar {
+    margin-top: 15px;
+    width: 225px;
+    border-right: 1px solid #111;
+    font-size: 15px;
+}
+
+#sidebar p {
+    margin: 0;
+}
+
+#uofalogo {
+    width: max-content;
+    height: max-content;
+    margin: 10px auto 15px auto;
+}
+
+#contact, #education {
+    text-align: center;
+    margin: 20px 0 20px 0;
+}
+
+#skills, #interests {
+    margin: 25px 0 15px 0;
+    text-align: left;
+}
+
+#skills ul, #interests ul {
+    list-style-type: circle;
+    font-size: 14px;
+}
