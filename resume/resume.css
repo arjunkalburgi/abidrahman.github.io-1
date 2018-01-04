@@ -4,14 +4,19 @@
     The main stylesheet for my resume
 */
 
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+}
+
 body {
     margin: 50px auto;
     width: 850px;
     height: 1200px;
     font-family: 'Rajdhani', sans-serif;
     background: rgba(221, 221, 221, 0.6);
-    -webkit-text-size-adjust: none;
-    font-size: 100%;
 }
 
 h1 {
