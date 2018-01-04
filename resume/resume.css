@@ -125,3 +125,8 @@ ul #description li {
 #langdesc {
     font-size: 1.1em;
 }
+
+#download {
+    float:right;
+    text-align: right;
+}
