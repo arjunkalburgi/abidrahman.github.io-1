@@ -10,6 +10,8 @@ body {
     height: 1200px;
     font-family: 'Rajdhani', sans-serif;
     background: rgba(221, 221, 221, 0.6);
+    -webkit-text-size-adjust: none;
+    font-size: 100%;
 }
 
 h1 {
