@@ -11,6 +11,12 @@ html {
     -ms-text-size-adjust: none;
 }
 
+@media (min-width: 858px) {
+    html {
+        font-size: 12px;
+    }
+}
+
 body {
     margin: 50px auto;
     width: 850px;
