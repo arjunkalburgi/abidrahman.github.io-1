@@ -18,36 +18,43 @@ html {
 }
 
 body {
-    font-size: 1.1em;
+    font-size: 1.02em;
     margin: 50px auto;
     width: 850px;
     height: 1150px;
     font-family: 'Quicksand', sans-serif;
-    font-weight: 100;
     background: rgba(221, 221, 221, 0.6);
 }
 
 h1 {
+    font-family: 'Rajdhani', sans-serif;
     margin-left: 25px;
     font-weight: 300;
 }
 
 h2 {
-    font-weight: 100;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
     font-size: 1.4em;
     margin: 15px 0 10px 10px;
 }
 
 h3 {
+    font-family: 'Rajdhani', sans-serif;
     margin: 0;
     font-size: 1.1em;
-    font-weight: 100;
+    font-weight: 600;
+}
+
+#sidebar h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
 }
 
 h4 {
     margin: 0;
     font-size: 0.9em;
-    font-weight: 100;
+    font-weight: 400;
 }
 
 hr {
@@ -81,8 +88,9 @@ ul #description li {
 }
 
 .date {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1em;
     float:right;
-    font-style: italic;
 }
 
 #content {
@@ -111,6 +119,7 @@ ul #description li {
 
 #sidebar {
     margin-top: 15px;
+    margin-right: 5px;
     width: 225px;
     border-right: 1px solid #111;
     font-size: 0.8em;
