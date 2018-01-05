@@ -18,11 +18,11 @@ html {
 }
 
 body {
-    font-size: 1.1em;
     margin: 50px auto;
     width: 850px;
     height: 1200px;
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 100;
     background: rgba(221, 221, 221, 0.6);
 }
 
@@ -32,6 +32,7 @@ h1 {
 }
 
 h2 {
+    font-weight: 100;
     font-size: 1.4em;
     margin: 15px 0 10px 10px;
 }
@@ -39,11 +40,13 @@ h2 {
 h3 {
     margin: 0;
     font-size: 1.17em;
+    font-weight: 100;
 }
 
 h4 {
     margin: 0;
     font-size: 0.9em;
+    font-weight: 100;
 }
 
 hr {
