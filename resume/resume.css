@@ -21,7 +21,7 @@ body {
     font-size: 1.1em;
     margin: 50px auto;
     width: 850px;
-    height: 1200px;
+    height: 1150px;
     font-family: 'Quicksand', sans-serif;
     font-weight: 100;
     background: rgba(221, 221, 221, 0.6);
@@ -40,7 +40,7 @@ h2 {
 
 h3 {
     margin: 0;
-    font-size: 1.17em;
+    font-size: 1.1em;
     font-weight: 100;
 }
 
@@ -86,7 +86,7 @@ ul #description li {
 }
 
 #content {
-    height: 1075px;
+    height: 1045px;
     width: 850px;
     display: flex;
     flex-direction: row;
